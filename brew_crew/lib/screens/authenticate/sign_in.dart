@@ -31,7 +31,8 @@ class _SignInState extends State<SignIn> {
               // 取得した匿名ログイン結果の判定
               if(result == null){
                 print("error signing in");// ログイン失敗時にconsoleに出力
-              }else{
+              }
+              else{
                 print("signed in"); // ログイン成功時にconsoleに出力
                 print(result); // 取得した匿名ログイン結果を表示
               }
