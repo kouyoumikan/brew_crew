@@ -1,15 +1,22 @@
+import 'package:brew_crew/models/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthService {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
+  // create user obj based on FirebaseUser
+  User _userFormFirebaseUser(FirebaseUser user) {
+    // firebaseUserのデータで取得したユーザーとuidを取得
+    return user != null ? User(uid: user.uid) : null;
+  }
+
   // sign in anon (匿名でサインイン)
   Future signInAnon() async {
     try {
       AuthResult result = await _auth.signInAnonymously(); // 匿名ログイン結果を取得する
       FirebaseUser user = result.user; // ユーザーにアクセス
-      return user; // アクセスしたユーザーに取得結果を返す
+      return _userFormFirebaseUser(user); // アクセスしたユーザーに取得結果を返す
     }
     catch (e){
       print(e.toString()); // console にエラー内容を文字列で表示
