@@ -10,7 +10,8 @@ class AuthService {
       AuthResult result = await _auth.signInAnonymously(); // 匿名ログイン結果を取得する
       FirebaseUser user = result.user; // ユーザーにアクセス
       return user; // アクセスしたユーザーに取得結果を返す
-    }catch (e){
+    }
+    catch (e){
       print(e.toString()); // console にエラー内容を文字列で表示
       return null; // 匿名ログイン結果の取得失敗
     }
