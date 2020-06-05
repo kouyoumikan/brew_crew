@@ -12,9 +12,10 @@ class AuthService {
   }
 
   // auth change user stream (認証の変更を検出するstreamsをセットアップ)
-  Stream<FirebaseUser> get user {
+  Stream<User> get user {
     return _auth.onAuthStateChanged
-      .map((FirebaseUser user) => _userFormFirebaseUser(user));
+      //.map((FirebaseUser user) => _userFormFirebaseUser(user));
+      .map(_userFormFirebaseUser); // 上記のソースコードを簡略化
   }
 
   // sign in anon (匿名でサインイン)
