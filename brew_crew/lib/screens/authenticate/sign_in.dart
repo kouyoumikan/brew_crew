@@ -34,7 +34,7 @@ class _SignInState extends State<SignIn> {
               }
               else{
                 print("signed in"); // ログイン成功時にconsoleに出力
-                print(result); // 取得した匿名ログイン結果を表示
+                print(result.uid); // 取得した匿名ログイン結果を出力
               }
             },
           ),
