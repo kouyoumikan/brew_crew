@@ -1,6 +1,6 @@
 class User {
-  final String uid; // ƒ†[ƒU[‚ªˆÙ‚È‚é‰æ–Ê‚ÉˆÚ“®‚µ‚Ä‚à•Ï‰»‚µ‚È‚¢ƒvƒƒpƒeƒB‚ð’è‹`
+  final String uid; // ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½ï¿½ï¿½Ù‚È‚ï¿½ï¿½Ê‚ÉˆÚ“ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ï‰ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½vï¿½ï¿½ï¿½pï¿½eï¿½Bï¿½ï¿½ï¿½`
 
-  User({ this.uid }); // Žæ“¾‚µ‚½uid‚ðŽó‚¯Žæ‚éƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ð–¼‘O•t‚«ƒpƒ‰ƒ[ƒ^[‚ðÝ’è
+  User({ this.uid }); // ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½uidï¿½ï¿½ï¿½ó‚¯Žï¿½ï¿½Rï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½^ï¿½ð–¼‘Oï¿½tï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½[ï¿½ï¿½Ý’ï¿½
 
 }

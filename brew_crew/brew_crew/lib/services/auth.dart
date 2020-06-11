@@ -7,34 +7,34 @@ class AuthService {
 
   // create user obj based on FirebaseUser
   User _userFormFirebaseUser(FirebaseUser user) {
-    // firebaseUser‚Ìƒf[ƒ^‚Åæ“¾‚µ‚½ƒ†[ƒU[‚Æuid‚ğæ“¾
+    // firebaseUserï¿½Ìƒfï¿½[ï¿½^ï¿½Åæ“¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½ï¿½uidï¿½ï¿½ï¿½æ“¾
     return user != null ? User(uid: user.uid) : null;
   }
 
-  // auth change user stream (”FØ‚Ì•ÏX‚ğŒŸo‚·‚éstreams‚ğƒZƒbƒgƒAƒbƒv)
+  // auth change user stream (ï¿½Fï¿½Ø‚Ì•ÏXï¿½ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½streamsï¿½ï¿½ï¿½Zï¿½bï¿½gï¿½Aï¿½bï¿½v)
   Stream<User> get user {
     return _auth.onAuthStateChanged
       //.map((FirebaseUser user) => _userFormFirebaseUser(user));
-      .map(_userFormFirebaseUser); // ã‹L‚Ìƒ\[ƒXƒR[ƒh‚ğŠÈ—ª‰»
+      .map(_userFormFirebaseUser); // ï¿½ï¿½Lï¿½Ìƒ\ï¿½[ï¿½Xï¿½Rï¿½[ï¿½hï¿½ï¿½ï¿½È—ï¿½ï¿½ï¿½
   }
 
-  // sign in anon (“½–¼‚ÅƒTƒCƒ“ƒCƒ“)
+  // sign in anon (ï¿½ï¿½ï¿½ï¿½ï¿½ÅƒTï¿½Cï¿½ï¿½ï¿½Cï¿½ï¿½)
   Future signInAnon() async {
     try {
-      AuthResult result = await _auth.signInAnonymously(); // “½–¼ƒƒOƒCƒ“Œ‹‰Ê‚ğæ“¾‚·‚é
-      FirebaseUser user = result.user; // ƒ†[ƒU[‚ÉƒAƒNƒZƒX
-      return _userFormFirebaseUser(user); // ƒAƒNƒZƒX‚µ‚½ƒ†[ƒU[‚Éæ“¾Œ‹‰Ê‚ğ•Ô‚·
+      AuthResult result = await _auth.signInAnonymously(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Ê‚ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½
+      FirebaseUser user = result.user; // ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½ÉƒAï¿½Nï¿½Zï¿½X
+      return _userFormFirebaseUser(user); // ï¿½Aï¿½Nï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Éæ“¾ï¿½ï¿½ï¿½Ê‚ï¿½Ô‚ï¿½
     }
     catch (e){
-      print(e.toString()); // console ‚ÉƒGƒ‰[“à—e‚ğ•¶š—ñ‚Å•\¦
-      return null; // “½–¼ƒƒOƒCƒ“Œ‹‰Ê‚Ìæ“¾¸”s
+      print(e.toString()); // console ï¿½ÉƒGï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½eï¿½ğ•¶ï¿½ï¿½ï¿½Å•\ï¿½ï¿½
+      return null; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Ê‚Ìæ“¾ï¿½ï¿½ï¿½s
     }
   }
 
-  // sign in with email & password (Email/Password‚ÅƒTƒCƒ“ƒCƒ“)
+  // sign in with email & password (Email/Passwordï¿½ÅƒTï¿½Cï¿½ï¿½ï¿½Cï¿½ï¿½)
 
-  // register with email & password (Email/Password‚Å“o˜^)
+  // register with email & password (Email/Passwordï¿½Å“oï¿½^)
 
-  // sign out (ƒTƒCƒ“ƒAƒEƒg)
+  // sign out (ï¿½Tï¿½Cï¿½ï¿½ï¿½Aï¿½Eï¿½g)
 
 }

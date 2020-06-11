@@ -8,7 +8,7 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
 
-  // firebase authƒpƒbƒP[ƒW‚ÉƒAƒNƒZƒX‚·‚é•Ï”ì¬
+  // firebase authï¿½pï¿½bï¿½Pï¿½[ï¿½Wï¿½ÉƒAï¿½Nï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½Ïï¿½ï¿½ì¬
   final AuthService _auth = AuthService();
 
   @override
@@ -17,7 +17,7 @@ class _SignInState extends State<SignIn> {
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
-        elevation: 0.0, // ƒAƒvƒŠƒo[‚ÌƒhƒƒbƒvƒVƒƒƒhƒE‚ğíœ
+        elevation: 0.0, // ï¿½Aï¿½vï¿½ï¿½ï¿½oï¿½[ï¿½Ìƒhï¿½ï¿½ï¿½bï¿½vï¿½Vï¿½ï¿½ï¿½hï¿½Eï¿½ï¿½ï¿½íœ
         title: Text("Sign in Brew Crew"),
       ),
       body: Container(
@@ -25,16 +25,16 @@ class _SignInState extends State<SignIn> {
           child: RaisedButton(
             child: Text("sign in anon"),
             onPressed: () async {
-               // auth.dart‚Åæ“¾‚µ‚½“½–¼ƒƒOƒCƒ“Œ‹‰Ê‚ğ”ñ“¯Šú‚ÅŒÄ‚Ño‚·
-               // “½–¼ƒƒOƒCƒ“‚ª¸”s‚É‚ÍnoA¬Œ÷‚É‚Ídatabasaƒ†[ƒU[‚Æ‚µ‚Äƒf[ƒ^‚ğ•Ô‚·
+               // auth.dartï¿½Åæ“¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Ê‚ï¿½ñ“¯Šï¿½ï¿½ÅŒÄ‚Ñoï¿½ï¿½
+               // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½É‚ï¿½noï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½databasaï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Æ‚ï¿½ï¿½Äƒfï¿½[ï¿½^ï¿½ï¿½Ô‚ï¿½
               dynamic result = await _auth.signInAnon();
-              // æ“¾‚µ‚½“½–¼ƒƒOƒCƒ“Œ‹‰Ê‚Ì”»’è
+              // ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Ê‚Ì”ï¿½ï¿½ï¿½
               if(result == null){
-                print("error signing in");// ƒƒOƒCƒ“¸”s‚Éconsole‚Éo—Í
+                print("error signing in");// ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½consoleï¿½Éoï¿½ï¿½
               }
               else{
-                print("signed in"); // ƒƒOƒCƒ“¬Œ÷‚Éconsole‚Éo—Í
-                print(result.uid); // æ“¾‚µ‚½“½–¼ƒƒOƒCƒ“Œ‹‰Ê‚ğo—Í
+                print("signed in"); // ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½consoleï¿½Éoï¿½ï¿½
+                print(result.uid); // ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Ê‚ï¿½ï¿½oï¿½ï¿½
               }
             },
           ),
