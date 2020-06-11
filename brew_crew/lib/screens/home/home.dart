@@ -9,7 +9,15 @@ class Home extends StatelessWidget {
         title: Text("Brew Crew"),
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        actions: <Widget>[],
+        actions: <Widget>[
+          FlatButton.icon(
+            onPressed: () {
+
+            }, 
+            icon: Icon(Icons.person), 
+            label: Text("logout"),
+          )
+        ],
       ),
     );
   }
