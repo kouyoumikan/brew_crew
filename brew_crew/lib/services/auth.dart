@@ -36,5 +36,14 @@ class AuthService {
   // register with email & password (Email/Passwordで登録)
 
   // sign out (サインアウト)
+  Future signOut() async {
+    try {
+      return await _auth.signOut();
+    }
+    catch(e) {
+      print(e.toString());
+      return null;
+    }
+  }
 
 }
